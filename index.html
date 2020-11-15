@@ -2,15 +2,17 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 <head>
-    <title>Cross-Browser QRCode generator for Javascript</title>
+    <title>QRCode Fast Share</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="qrcode.js"></script>
 </head>
 <body>
-<input id="text" type="text" value="https://github.com/lucasvrod" style="width:30%"/><br/>
-<div id="qrcode" style="width:250px; height:250px; margin-top:15px; position: fixed; left: 50%; margin-left: -100px;"></div>
+<div id="divText">
+<input id="text" type="text" value="https://github.com/lucasvrod" style="width:33%"/><br/>
+</div>
+<div id="qrcode" style="width:250px; height:250px; margin-top:15px; position: fixed; left: 50%; margin-left: -125px;"></div>
 
 <script type="text/javascript">
     var qrcode = new QRCode(document.getElementById("qrcode"), {
@@ -40,20 +42,9 @@
         }
     });
 </script>
-<!--<style>-->
-<!--    #qrcode {-->
-<!--        display: none;-->
-<!--        background-color: #F3F5F6;-->
-<!--        color: #000000;-->
-<!--        border: 1px solid #aaa;-->
-<!--        position: fixed;-->
-<!--        width: 300px;-->
-<!--        height: 100px;-->
-<!--        left: 50%;-->
-<!--        margin-left: -100px;-->
-<!--        padding: 10px 20px 10px;-->
-<!--        box-sizing: border-box;-->
-<!--        text-align: center;-->
-<!--    }-->
-<!--</style>-->
+<style>
+    #divText {
+        text-align: center;
+    }
+</style>
 </body>
